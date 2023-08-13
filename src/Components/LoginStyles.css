@@ -1,0 +1,110 @@
+.tabs {
+    margin:  10px 30%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    max-width: 350px;
+    background-color: #efefef;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 3px solid blue;
+    padding: 15px;  
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:is(:hover, :focus) {
+    background-color: rgb(169, 169, 169);
+    color: #fff;
+}
+
+.input-group,
+.input-group-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.input-group-user {
+    margin-left: 20px;
+}
+
+.input-group, .input-group-user label {
+    font-size: 14px;
+    color: #242424;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 80%;
+    padding: 15px 15px;
+    border-radius: 8px;
+}
+
+.input-group-user input {
+    width: 88%;
+    padding: 15px 15px;
+    border-radius: 8px;
+}
+
+.input-group input:focus {
+    outline: 2px solid#242424;
+    background-color: transparent;
+}
+
+.horizontal-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.submit-btn {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px 0;
+    position: relative;
+    left: 50%;
+}
+
+.container-bottom p {
+    margin: 10px 31%;
+    font-size: 1rem;
+    font-weight: 500;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        margin:  10px 15%;
+        gap: 10px;
+    }
+
+    .horizontal-grid {   
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 0px;
+        margin-left: 45px;
+    }
+    .submit-btn {
+        font-size: 12px;
+        padding: 15px 0;
+        width: 80%;
+        left: 0%;
+    }
+
+    .input-group-user input {
+        width: 80%;
+    }
+
+    .input-group-user {
+        margin-left: 45px;
+    }
+}
